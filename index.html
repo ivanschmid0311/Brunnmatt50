@@ -402,7 +402,7 @@ footer a { color:var(--muted); text-decoration:none; }
     <div class="lb-next" onclick="lbNav(1)">›</div>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
   const lbSrcs = [
     "WhatsApp Image 2026-03-29 at 21.44.28.jpeg",
     "ChatGPT_Image_29._Ma%CC%88rz_2026%2C_16_35_41.png",
@@ -521,7 +521,7 @@ footer a { color:var(--muted); text-decoration:none; }
 <footer>
   <div>Brunnmattstrasse 50 · 3007 Bern</div>
   <div id="footer-mid">Ferienwohnung · Sommer 2026</div>
-  <div><a href="#" class="email-link">ivan.schmid@me.com</a></div>
+  <div><a href="#" class="email-link"><span class="__cf_email__" data-cfemail="bad3ccdbd494c9d9d2d7d3defad7df94d9d5d7">[email&#160;protected]</span></a></div>
 </footer>
 
 <script>
@@ -645,7 +645,10 @@ function toggleLang(){
   // Footer
   var fm=document.getElementById("footer-mid"); if(fm)fm.textContent=t.footerMid;
 });var ch2=document.querySelector(".contact-section h2");if(ch2)ch2.innerHTML=t.contactT;var cps=document.querySelectorAll(".contact-section p");if(cps[0])cps[0].textContent=t.contactP;}
-document.addEventListener("DOMContentLoaded",function(){var e="ivan.schmid"+"@"+"me.com";document.querySelectorAll(".email-link").forEach(function(el){el.href="mailto:"+e;el.textContent=e;});});
+document.addEventLisener("DOMContentLoaded",function(){
+  var e="ivan.schmid"+"@"+"me.com";
+  document.querySelectorAll(".email-link").forEach(function(el){el.href="mailto:"+e;el.textContent=e;});
+});
 </script>
 </body>
 </html>
