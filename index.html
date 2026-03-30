@@ -330,13 +330,14 @@ footer a { color:var(--muted); text-decoration:none; }
 </head>
 <body>
 
-<nav>
+<nav style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:16px 60px;">
   <div class="nav-logo">Brunnmatt<span>50</span></div>
-  <div class="nav-links">
+  <button id="lang-btn" onclick="toggleLang()" style="background:none;border:1px solid var(--light-muted);padding:10px 24px;font-size:12px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;color:var(--charcoal);transition:border-color .2s,color .2s,background .2s;" onmouseover="this.style.borderColor='var(--oak)';this.style.color='var(--oak)'" onmouseout="this.style.borderColor='var(--light-muted)';this.style.color='var(--charcoal)'">EN</button>
+  <div class="nav-links" style="justify-content:flex-end;">
     <a href="#fotos">Fotos</a>
     <a href="#preise">Preise</a>
     <a href="#kalender">Belegung</a>
-    <a href="#" class="email-link">ivan.schmid@<!---->me.com</a>
+    <a href="#kontakt" class="cta">Anfragen</a>
   </div>
 </nav>
 
