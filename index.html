@@ -222,11 +222,11 @@ section { padding:80px; }
 .section-label { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--oak); margin-bottom:16px; }
 h2.stitle { font-family:'Playfair Display',serif; font-size:clamp(30px,3.5vw,46px); font-weight:400; margin-bottom:40px; }
 
-.gallery-grid { display:grid; grid-template-columns:1.6fr 1fr 1fr; grid-template-rows:260px 260px; gap:10px; }
-.gallery-grid .span2 { grid-row:span 2; }
-.gitem { overflow:hidden; position:relative; }
-.gitem img { width:100%; height:100%; object-fit:cover; transition:transform .5s; display:block; }
-.gitem:hover img { transform:scale(1.05); }
+.gallery-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
+.gallery-grid .span2 { grid-column:span 1; }
+.gitem { position:relative; }
+.gitem img { width:100%; height:auto; display:block; transition:transform .5s; }
+.gitem:hover img { transform:scale(1.02); }
 .gitem .cap { position:absolute; bottom:0; left:0; right:0; padding:10px 14px; background:linear-gradient(transparent,rgba(0,0,0,.5)); color:white; font-size:11px; letter-spacing:2px; text-transform:uppercase; opacity:0; transition:opacity .3s; }
 .gitem:hover .cap { opacity:1; }
 
@@ -345,6 +345,19 @@ footer a { color:var(--muted); text-decoration:none; }
       <div class="pill">Parkplatz inbegriffen</div>
       <div class="pill">Zentral gelegen</div>
     </div>
+    <div style="display:flex;gap:32px;margin-bottom:36px;">
+      <div>
+        <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--oak);margin-bottom:4px;">Pro Woche</div>
+        <div style="font-family:'Playfair Display',serif;font-size:36px;color:white;line-height:1;">CHF 680</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;">inkl. NK & Parkplatz</div>
+      </div>
+      <div style="width:1px;background:rgba(255,255,255,0.2);"></div>
+      <div>
+        <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--oak);margin-bottom:4px;">Pro Monat</div>
+        <div style="font-family:'Playfair Display',serif;font-size:36px;color:white;line-height:1;">CHF 1'700</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;">inkl. NK & Parkplatz</div>
+      </div>
+    </div>
     <div class="hero-btns">
       <a href="#kalender" class="btn-w">Verfügbarkeit prüfen</a>
       <a href="#kontakt" class="btn-o">Anfragen</a>
@@ -365,10 +378,10 @@ footer a { color:var(--muted); text-decoration:none; }
   <h2 class="stitle">Die Wohnung</h2>
   <div class="gallery-grid">
     <div class="gitem span2"><img id="g-bedroom" src="WhatsApp%20Image%202026-03-29%20at%2021.45.54.jpeg" alt="Schlafzimmer"><div class="cap">Schlafzimmer</div></div>
-    <div class="gitem" style="height:260px;"><img id="g-kitchen" src="Helles_skandinavisches_Ku_chen-Dining-Wohnzimmer.png" alt="Küche"><div class="cap">Küche & Esszimmer</div></div>
-    <div class="gitem" style="height:260px;"><img id="g-living" src="WhatsApp%20Image%202026-03-29%20at%2021.44.29%20(3).jpeg" alt="Wohnzimmer"><div class="cap">Wohnzimmer</div></div>
-    <div class="gitem" style="height:260px;"><img id="g-terrace" src="WhatsApp%20Image%202026-03-30%20at%2007.22.23.jpeg" alt="Garten"><div class="cap">Garten & Terrasse</div></div>
-    <div class="gitem" style="height:260px;"><img id="g-bath" src="Moderne_Badezimmer-Details_in_drei_Bildern.png" alt="Bad"><div class="cap">Badezimmer</div></div>
+    <div class="gitem"><img id="g-kitchen" src="Helles_skandinavisches_K%C3%BCchen-Dining-Wohnzimmer.png" alt="Küche"><div class="cap">Küche & Esszimmer</div></div>
+    <div class="gitem"><img id="g-living" src="WhatsApp%20Image%202026-03-29%20at%2021.44.29%20(3).jpeg" alt="Wohnzimmer"><div class="cap">Wohnzimmer</div></div>
+    <div class="gitem"><img id="g-terrace" src="WhatsApp%20Image%202026-03-30%20at%2007.22.23.jpeg" alt="Garten"><div class="cap">Garten & Terrasse</div></div>
+    <div class="gitem"><img id="g-bath" src="Moderne_Badezimmer-Details_in_drei_Bildern.png" alt="Bad"><div class="cap">Badezimmer</div></div>
   </div>
 </section>
 
@@ -415,7 +428,7 @@ footer a { color:var(--muted); text-decoration:none; }
   </div>
   <div class="pnote-box">
     <strong>Alle Preise inkl. Nebenkosten, Strom, Wasser und Parkplatz.</strong><br>
-    Mindestmietdauer: 1 Woche · Verfügbar: 5. Mai – 30. September 2026 · Anfragen: <a href="/cdn-cgi/l/email-protection#177e6176793964747f7a7e73577a723974787a"><span class="__cf_email__" data-cfemail="bbd2cddad595c8d8d3d6d2dffbd6de95d8d4d6">[email&#160;protected]</span></a>
+    Mindestmietdauer: 1 Woche · Verfügbar: 5. Mai – 30. September 2026 · Anfragen: <a href="mailto:ivan.schmid@me.com">ivan.schmid@me.com</a>
   </div>
 </section>
 
@@ -462,7 +475,7 @@ footer a { color:var(--muted); text-decoration:none; }
     <div>
       <h2>Interesse?<br>Einfach melden.</h2>
       <p>Für Anfragen, Verfügbarkeiten oder weitere Fragen stehen wir gerne zur Verfügung.</p>
-      <div class="cdetail"><div class="cl">E-Mail</div><div class="cv"><a href="/cdn-cgi/l/email-protection#244d52454a0a57474c494d406449410a474b49"><span class="__cf_email__" data-cfemail="6e07180f00401d0d0603070a2e030b400d0103">[email&#160;protected]</span></a></div></div>
+      <div class="cdetail"><div class="cl">E-Mail</div><div class="cv"><a href="mailto:ivan.schmid@me.com">ivan.schmid@me.com</a></div></div>
       <div class="cdetail" style="margin-top:16px;"><div class="cl">Adresse</div><div class="cv">Brunnmattstrasse 50<br>3007 Bern, Schweiz</div></div>
       <div class="cdetail" style="margin-top:16px;"><div class="cl">Verfügbarkeit</div><div class="cv">5. Mai – 30. September 2026</div></div>
     </div>
@@ -473,8 +486,8 @@ footer a { color:var(--muted); text-decoration:none; }
 <footer>
   <div>Brunnmattstrasse 50 · 3007 Bern</div>
   <div>Ferienwohnung · Sommer 2026</div>
-  <div><a href="/cdn-cgi/l/email-protection#eb829d8a85c598888386828fab868ec5888486"><span class="__cf_email__" data-cfemail="bbd2cddad595c8d8d3d6d2dffbd6de95d8d4d6">[email&#160;protected]</span></a></div>
+  <div><a href="mailto:ivan.schmid@me.com">ivan.schmid@me.com</a></div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const I = {"hero": "REMOVED", "bedroom": "REMOVED", "kitchen": "REMOVED", "living": "REMOVED", "terrace": "REMOVED", "bath": "REMOVED
