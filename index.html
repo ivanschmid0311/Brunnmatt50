@@ -375,8 +375,8 @@ footer a { color:var(--muted); text-decoration:none; }
   <div class="stat"><div class="label" id="s0l">Zimmer</div><div class="value">3.5</div><div class="sub" id="s0s">Zimmer</div></div>
   <div class="stat"><div class="label" id="s1l">Ab</div><div class="value">850</div><div class="sub" id="s1s">CHF / Woche</div></div>
   <div class="stat"><div class="label" id="s2l">Monat</div><div class="value">2'200</div><div class="sub" id="s2s">CHF / Monat</div></div>
-  <div class="stat"><div class="label" id="s3l">Verf&uuml;gbar</div><div class="value">8. Mai</div><div class="sub" id="s3s">bis 30. September</div></div>
-  <div class="stat"><div class="label" id="s4l">Mindestmiete</div><div class="value">1 Woche</div><div class="sub" id="s4s">flexibel buchbar</div></div>
+  <div class="stat"><div class="label" id="s3l">Verf&uuml;gbar</div><div class="value" id="s3v">8. Mai</div><div class="sub" id="s3s">bis 30. September</div></div>
+  <div class="stat"><div class="label" id="s4l">Mindestmiete</div><div class="value" id="s4v">1 Woche</div><div class="sub" id="s4s">flexibel buchbar</div></div>
 </div>
 
 <section style="background:white;" id="fotos">
@@ -442,6 +442,52 @@ footer a { color:var(--muted); text-decoration:none; }
   <div class="pnote-box">
     <strong id="pnbox1">Alle Preise inkl. Nebenkosten, Strom, Wasser, Parkplatz und Endreinigung.</strong><br>
     <span id="pnbox2">Mindestmietdauer: 1 Woche &middot; Verf&uuml;gbar: 8. Mai &ndash; 30. September 2026 &middot; Anfragen:</span><br><span id="pnbox3">Ab 2 Monaten Dauermiete: Preis nach Absprache.</span> <a href="#" class="email-link"><span class="__cf_email__" data-cfemail="6d041b0c03431e0e050004092d0008430e0200">[email&#160;protected]</span></a>
+  </div>
+</section>
+
+
+<section style="background:var(--cream);">
+  <div class="section-label" id="sl-pay">Zahlungsbedingungen</div>
+  <h2 class="stitle" id="st-pay">Buchung &amp; Stornierung</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:900px;">
+
+    <div style="background:white;padding:32px;border-left:3px solid var(--oak);">
+      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--oak);margin-bottom:16px;" id="pay-title">Zahlung</div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:16px;align-items:flex-start;">
+          <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--dark-oak);flex-shrink:0;">30%</div>
+          <div style="font-size:13px;color:#555;line-height:1.6;" id="pay1">Anzahlung bei Buchungsbestätigung</div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start;">
+          <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--dark-oak);flex-shrink:0;">70%</div>
+          <div style="font-size:13px;color:#555;line-height:1.6;" id="pay2">Restzahlung 4 Wochen vor Einzug</div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:flex-start;">
+          <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--dark-oak);flex-shrink:0;">500</div>
+          <div style="font-size:13px;color:#555;line-height:1.6;" id="pay3">CHF Kaution, R&uuml;ckgabe innert 7 Tagen nach Auszug</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:white;padding:32px;border-left:3px solid var(--light-muted);">
+      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--oak);margin-bottom:16px;" id="cancel-title">Stornierung</div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--light-muted);">
+          <span style="font-size:13px;color:#555;" id="c1l">&gt; 6 Wochen vorher</span>
+          <span style="font-size:13px;font-weight:500;color:var(--green);" id="c1r">Volle R&uuml;ckerstattung*</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--light-muted);">
+          <span style="font-size:13px;color:#555;" id="c2l">4–6 Wochen vorher</span>
+          <span style="font-size:13px;font-weight:500;color:var(--oak);" id="c2r">50% zur&uuml;ck</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;">
+          <span style="font-size:13px;color:#555;" id="c3l">&lt; 4 Wochen vorher</span>
+          <span style="font-size:13px;font-weight:500;color:#c0392b;" id="c3r">Keine R&uuml;ckerstattung</span>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin-top:8px;" id="c-note">* minus CHF 50 Bearbeitungsgeb&uuml;hr</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -544,7 +590,7 @@ var T = {
     hwLabel:"Pro Woche", hwSub:"inkl. NK & Parkplatz", hmLabel:"Pro Monat", hmSub:"inkl. NK & Parkplatz",
     btn1:"Verfügbarkeit prüfen", btn2:"Anfragen",
     s0l:"Zimmer", s0s:"Zimmer", s1l:"Ab", s1s:"CHF / Woche", s2l:"Monat", s2s:"CHF / Monat",
-    s3l:"Verfügbar", s3s:"bis 30. September", s4l:"Mindestmiete", s4s:"flexibel buchbar",
+    s3l:"Verfügbar", s3v:"8. Mai", s3s:"bis 30. September", s4l:"Mindestmiete", s4v:"1 Woche", s4s:"flexibel buchbar",
     sl0:"Einblicke", st0:"Die Wohnung",
     sl1:"Ausstattung", st1:"Historisches Flair, moderner Komfort",
     fp1:"Diese Wohnung in einem Berner Altbauhaus bietet 2 Schlafzimmer (1 × Doppelbett, 1 × 2 Einzelbetten), eine Wohnküche mit Essbereich und ein Badezimmer. Holzvertäfelung, Parkett im Fischgrätmuster und hohe Sprossenfenster geben ihr einen eigenen Charakter.",
@@ -566,7 +612,7 @@ var T = {
     cd0l:"E-Mail", cd1l:"Adresse", cd2l:"Verfügbarkeit", cd2v:"8. Mai – 30. September 2026",
     contactT:"Interesse?<br>Einfach melden.", contactP:"Für Anfragen, Verfügbarkeiten oder weitere Fragen stehen wir gerne zur Verfügung.",
     nav0:"Fotos", nav1:"Preise", nav2:"Belegung", nav3:"Anfragen",
-    footerMid:"Ferienwohnung · Sommer 2026",
+    footerMid:"Ferienwohnung · Sommer 2026","sl-pay":"Zahlungsbedingungen","st-pay":"Buchung & Stornierung","pay-title":"Zahlung","pay1":"Anzahlung bei Buchungsbestätigung","pay2":"Restzahlung 4 Wochen vor Einzug","pay3":"CHF 500 Kaution, Rückgabe innert 7 Tagen nach Auszug","cancel-title":"Stornierung","c1l":"> 6 Wochen vorher","c1r":"Volle Rückerstattung*","c2l":"4–6 Wochen vorher","c2r":"50% zurück","c3l":"< 4 Wochen vorher","c3r":"Keine Rückerstattung","c-note":"* minus CHF 50 Bearbeitungsgebühr",
     cap0:"Schlafzimmer", cap1:"Zimmer", cap2:"Küche", cap3:"Esszimmer", cap4:"Garten & Terrasse", cap5:"Schlafzimmer sonnig"
   },
   en: {
@@ -576,7 +622,7 @@ var T = {
     hwLabel:"Per Week", hwSub:"incl. utilities & parking", hmLabel:"Per Month", hmSub:"incl. utilities & parking",
     btn1:"Check Availability", btn2:"Enquire",
     s0l:"Rooms", s0s:"rooms", s1l:"From", s1s:"CHF / week", s2l:"Month", s2s:"CHF / month",
-    s3l:"Available", s3s:"until 30 September", s4l:"Min. stay", s4s:"flexible booking",
+    s3l:"Available", s3v:"8 May", s3s:"until 30 September", s4l:"Min. stay", s4v:"1 week", s4s:"flexible booking",
     sl0:"Gallery", st0:"The Apartment",
     sl1:"Features", st1:"Historic Character, Modern Comfort",
     fp1:"This apartment in a historic Bernese house has 2 bedrooms (1 × double bed, 1 × 2 single beds), an open-plan kitchen with dining area, and a bathroom. Wood panelling, herringbone parquet floors and tall lattice windows give it a unique character.",
@@ -598,7 +644,7 @@ var T = {
     cd0l:"Email", cd1l:"Address", cd2l:"Availability", cd2v:"May 8 – September 30, 2026",
     contactT:"Interested?<br>Get in touch.", contactP:"For enquiries, availability or any other questions, we’re happy to help.",
     nav0:"Photos", nav1:"Prices", nav2:"Availability", nav3:"Enquire",
-    footerMid:"Holiday Apartment · Summer 2026",
+    footerMid:"Holiday Apartment · Summer 2026","sl-pay":"Payment Terms","st-pay":"Booking & Cancellation","pay-title":"Payment","pay1":"30% deposit upon booking confirmation","pay2":"70% balance due 4 weeks before check-in","pay3":"CHF 500 deposit, returned within 7 days after check-out","cancel-title":"Cancellation","c1l":"> 6 weeks before","c1r":"Full refund*","c2l":"4–6 weeks before","c2r":"50% refunded","c3l":"< 4 weeks before","c3r":"No refund","c-note":"* minus CHF 50 admin fee",
     cap0:"Bedroom", cap1:"Rooms", cap2:"Kitchen", cap3:"Dining room", cap4:"Garden & Terrace", cap5:"Sunny bedroom"
   }
 };
@@ -624,8 +670,8 @@ function toggleLang() {
   setEl("s0l", t.s0l); setEl("s0s", t.s0s);
   setEl("s1l", t.s1l); setEl("s1s", t.s1s);
   setEl("s2l", t.s2l); setEl("s2s", t.s2s);
-  setEl("s3l", t.s3l); setEl("s3s", t.s3s);
-  setEl("s4l", t.s4l); setEl("s4s", t.s4s);
+  setEl("s3l", t.s3l); setEl("s3v", t.s3v); setEl("s3s", t.s3s);
+  setEl("s4l", t.s4l); setEl("s4v", t.s4v); setEl("s4s", t.s4s);
   setEl("sl0", t.sl0); setEl("st0", t.st0);
   setEl("sl1", t.sl1); setEl("st1", t.st1);
   setEl("fp1", t.fp1); setEl("fp2", t.fp2);
@@ -647,6 +693,13 @@ function toggleLang() {
   setEl("contactT", t.contactT, true); setEl("contactP", t.contactP);
   setEl("nav0", t.nav0); setEl("nav1", t.nav1); setEl("nav2", t.nav2); setEl("nav3", t.nav3);
   setEl("footer-mid", t.footerMid);
+  setEl("sl-pay", t["sl-pay"]); setEl("st-pay", t["st-pay"]);
+  setEl("pay-title", t["pay-title"]); setEl("pay1", t.pay1); setEl("pay2", t.pay2); setEl("pay3", t.pay3);
+  setEl("cancel-title", t["cancel-title"]);
+  setEl("c1l", t.c1l); setEl("c1r", t.c1r);
+  setEl("c2l", t.c2l); setEl("c2r", t.c2r);
+  setEl("c3l", t.c3l); setEl("c3r", t.c3r);
+  setEl("c-note", t["c-note"]);
   setEl("cap0", t.cap0); setEl("cap1", t.cap1); setEl("cap2", t.cap2);
   setEl("cap3", t.cap3); setEl("cap4", t.cap4); setEl("cap5", t.cap5);
 }
