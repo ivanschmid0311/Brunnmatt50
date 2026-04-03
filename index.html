@@ -430,7 +430,7 @@ footer a { color:var(--muted); text-decoration:none; }
   </div>
   <div class="pnote-box">
     <strong id="pnbox1">Alle Preise inkl. Nebenkosten, Strom, Wasser und Parkplatz.</strong><br>
-    <span id="pnbox2">Mindestmietdauer: 1 Monat &middot; Verf&uuml;gbar: 5. Mai &ndash; 30. September 2026 &middot; Anfragen:</span><br><span id="pnbox3">Gesamte Mietdauer (5. Mai – 30. September): Preis nach Absprache.</span> <a href="#" class="email-link"><span class="__cf_email__" data-cfemail="412837202f6f3222292c2825012c246f222e2c">[email&#160;protected]</span></a>
+    <span id="pnbox2">Mindestmietdauer: 1 Monat &middot; Verf&uuml;gbar: 5. Mai &ndash; 30. September 2026 &middot; Anfragen:</span><br><span id="pnbox3">Gesamte Mietdauer (5. Mai – 30. September): Preis nach Absprache.</span> <a href="#" class="email-link">ivan.schmid@me.com</a>
   </div>
 </section>
 
@@ -536,7 +536,7 @@ footer a { color:var(--muted); text-decoration:none; }
     <div>
       <h2 id="contactT">Interesse?<br>Einfach melden.</h2>
       <p id="contactP">F&uuml;r Anfragen, Verf&uuml;gbarkeiten oder weitere Fragen stehen wir gerne zur Verf&uuml;gung.</p>
-      <div class="cdetail"><div class="cl" id="cd0l">E-Mail</div><div class="cv"><a href="#" class="email-link"><span class="__cf_email__" data-cfemail="29405f4847075a4a4144404d69444c074a4644">[email&#160;protected]</span></a></div></div>
+      <div class="cdetail"><div class="cl" id="cd0l">E-Mail</div><div class="cv"><a href="#" class="email-link">ivan.schmid@me.com</a></div></div>
       <div class="cdetail" style="margin-top:16px;"><div class="cl" id="cd1l">Adresse</div><div class="cv">Brunnmattstrasse 50<br>3007 Bern, Schweiz</div></div>
       <div class="cdetail" style="margin-top:16px;"><div class="cl" id="cd2l">Verf&uuml;gbarkeit</div><div class="cv" id="cd2v">5. Mai &ndash; 30. September 2026</div></div>
     </div>
@@ -547,10 +547,10 @@ footer a { color:var(--muted); text-decoration:none; }
 <footer>
   <div>Brunnmattstrasse 50 &middot; 3007 Bern</div>
   <div id="footer-mid">Wohnung auf Zeit &middot; Sommer 2026</div>
-  <div><a href="#" class="email-link"><span class="__cf_email__" data-cfemail="9cf5eafdf2b2effff4f1f5f8dcf1f9b2fff3f1">[email&#160;protected]</span></a></div>
+  <div><a href="#" class="email-link">ivan.schmid@me.com</a></div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // Lightbox
 var lbSrcs = [
   "WhatsApp Image 2026-03-29 at 21.44.28.jpeg",
@@ -685,4 +685,21 @@ function toggleLang() {
   setEl("sl-pay", t["sl-pay"]); setEl("st-pay", t["st-pay"]);
   setEl("pay-title", t["pay-title"]); setEl("pay1", t.pay1); setEl("pay2", t.pay2); setEl("pay3", t.pay3);
   setEl("cancel-title", t["cancel-title"]);
-  setEl("c1l", t.c1l); se
+  setEl("c1l", t.c1l); setEl("c1r", t.c1r);
+  setEl("c2l", t.c2l); setEl("c2r", t.c2r);
+  setEl("c3l", t.c3l); setEl("c3r", t.c3r);
+  setEl("c-note", t["c-note"]);
+  setEl("cap0", t.cap0); setEl("cap1", t.cap1); setEl("cap2", t.cap2);
+  setEl("cap3", t.cap3); setEl("cap4", t.cap4); setEl("cap5", t.cap5);
+}
+
+document.getElementById("lang-btn").addEventListener("click", toggleLang);
+
+document.querySelectorAll(".email-link").forEach(function(el){
+  var e = "ivan.schmid" + "@" + "me.com";
+  el.href = "mailto:" + e;
+  el.textContent = e;
+});
+</script>
+</body>
+</html>
